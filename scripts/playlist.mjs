@@ -1,5 +1,8 @@
 import fs from "fs";
 
+// import auth
+
+
 const MY_MUSIC_MAPPER = {
 	YBvcVTZefJM: {
 		singer: "아이유(IU)",
