@@ -1,3 +1,136 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "plugins": [
+    "no-relative-import-paths",
+    "import"
+  ],
+  "extends": [
+    "plugin:import/recommended",
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "import/no-internal-modules": "off",
+    "import/no-named-as-default": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          ".*"
+        ]
+      }
+    ],
+    "no-relative-import-paths/no-relative-import-paths": [
+      "error",
+      {
+        "rootDir": "src",
+        "prefix": "@",
+        "allowSameFolder": false,
+        "allowedDepth": 0
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 0
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom}",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "next\/*",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "{classnames,styled-components}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{jotai,jotai*}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@tanstack/react-query",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@/app/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/pages/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/widgets/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/features/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/entities/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/shared/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "react-dom",
+          "next*",
+          "classnames",
+          "styled-components",
+          "@*"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        },
+        "warnOnUnassignedImports": true
+      }
+    ]
+  }
 }

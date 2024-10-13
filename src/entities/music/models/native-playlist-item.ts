@@ -1,15 +1,4 @@
-type SnippetThumbnailKeys =
-	| "default"
-	| "medium"
-	| "high"
-	| "standard"
-	| "maxres";
-
-interface IThumbnail {
-	url: string;
-	width: number;
-	height: number;
-}
+import { YoutubeThumbnails } from "@/shared/models/youtube-thumbnail";
 
 export interface INativePlaylistItem {
 	kind: "youtube#playlistItem";
@@ -20,9 +9,9 @@ export interface INativePlaylistItem {
 		channelId: string;
 		title: string;
 		description: string;
-		thumbnails: Record<SnippetThumbnailKeys, IThumbnail>;
+		thumbnails: YoutubeThumbnails;
 		channelTitle: string;
-		videoOwnerChannelTitle: string;
+		videoOwnerChannelTitle?: string;
 		videoOwnerChannelId: string;
 		playlistId: string;
 		position: number;
