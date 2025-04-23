@@ -2,8 +2,8 @@ import { useCallback } from "react";
 
 import { useAtomValue } from "jotai";
 
+import { artistAliasDictionaryState } from "@/entities/music/models/artist";
 import {
-	artistAliasDictionaryState,
 	getArtist,
 	getTitle,
 	getUseMusicParam,

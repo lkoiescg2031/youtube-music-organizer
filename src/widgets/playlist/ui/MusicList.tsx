@@ -17,6 +17,7 @@ import {
 	MusicSortKeyType,
 	useMusicSorter,
 } from "@/features/sort-playlist-item/libs/useMusicSorter";
+import MusicSortForm from "@/features/sort-playlist-item/ui/MusicSortForm";
 
 import { useDeletePlaylistItemMutation } from "@/entities/music/apis/deletePlaylistItem";
 import { useInfiniteGetPlaylistItemQuery } from "@/entities/music/apis/getPlaylistItems";
@@ -25,10 +26,12 @@ import { INativePlaylistItem } from "@/entities/music/models/native-playlist-ite
 import YoutubeMusic from "@/entities/music/ui/YoutubeMusic";
 import { useInfiniteGetMyPlaylistQuery } from "@/entities/playlist/apis/playlist";
 
+import { IOverlay, useOverlay } from "@/shared/libs/overlay";
 import { useDocumentScrollEnd } from "@/shared/libs/useDocumentScrollEnd";
 import Button from "@/shared/ui-toolkit/Button";
 import GroupButton from "@/shared/ui-toolkit/GroupButton";
 import LoadingIcon from "@/shared/ui-toolkit/LoadingIcon";
+import Modal from "@/shared/ui-toolkit/Modal";
 
 interface IOrderablePlaylistItem extends INativePlaylistItem {
 	selected?: boolean;
@@ -41,6 +44,8 @@ export interface MusicListProps {
 }
 
 export default function MusicList(props: MusicListProps): React.ReactElement {
+	const overlay = useOverlay();
+
 	const playlistQuery = useInfiniteGetMyPlaylistQuery();
 
 	const [isSaving, setIsSaving] = useState(false);
@@ -115,6 +120,16 @@ export default function MusicList(props: MusicListProps): React.ReactElement {
 			items.splice(targetIdx, 0, updatedItem);
 
 			setReorderedItem(items);
+		};
+
+	const modifyItem: (itemId: string) => MouseEventHandler<HTMLButtonElement> =
+		(_itemId: string) => () => {
+			// TODO overlay의 resolve, reject 연결
+			overlay((props: IOverlay<void>) => (
+				<Modal open onClose={() => props.resolve()}>
+					<MusicSortForm />
+				</Modal>
+			));
 		};
 
 	const save: MouseEventHandler<
@@ -354,7 +369,7 @@ export default function MusicList(props: MusicListProps): React.ReactElement {
 												}}
 											/>
 											<div className={classNames("music-list-item-control")}>
-												<Button>수정</Button>
+												<Button onClick={modifyItem(item.id)}>수정</Button>
 												<Button color="danger" onClick={deleteItem(item.id)}>
 													삭제
 												</Button>

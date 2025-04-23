@@ -2,6 +2,9 @@
 
 import React from "react";
 
+import classNames from "classnames";
+import styled from "styled-components";
+
 import { useAtomValue } from "jotai";
 
 import Gnb from "@/widgets/gnb/ui/Gnb";
@@ -21,12 +24,18 @@ export default function PlaylistDetailPage(
 	const googleAuth = useAtomValue(googleAuthState);
 
 	return (
-		<>
+		<StyledPlaylistDetailPage className={classNames("playlist-detail-page")}>
 			<Gnb
 				accessTokenUrl={props.accessTokenUrl}
 				redirectUrl={props.redirectUrl}
 			/>
 			{isLogin(googleAuth) && <MusicList playlistId={props.playlistId} />}
-		</>
+		</StyledPlaylistDetailPage>
 	);
 }
+
+const StyledPlaylistDetailPage = styled.div`
+	&.playlist-detail-page {
+		width: 100vw;
+	}
+`;

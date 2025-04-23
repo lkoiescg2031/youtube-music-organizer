@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export interface ButtonProps {
 	className?: string;
-	type?: "button" | "submit";
+	type?: "button" | "submit" | "reset";
 	color?: "primary" | "secondary" | "tertiary" | "danger";
 	size?: "s" | "m";
 	pill?: boolean;

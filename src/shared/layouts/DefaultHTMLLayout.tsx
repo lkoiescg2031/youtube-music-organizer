@@ -21,5 +21,10 @@ export default function DefaultHTMLLayout(
 const StyledDefaultHTMLLayout = styled.html`
 	body {
 		user-select: none;
+
+		&:has(dialog) {
+			overflow: hidden;
+			height: 100vh;
+		}
 	}
 `;
