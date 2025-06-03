@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from "react";
 
-import { GnbLayout } from "@/pages/gnb";
+import { GnbLayout } from "pages/gnb";
 
 export interface GnbAppLayoutProps {
 	children?: ReactNode;

@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from "react";
 
-import { MusicList } from "@/widgets/music-list";
+import { MusicList } from "widgets/music-list";
 
 export interface MusicListPageProps {
 	playlistId: string;

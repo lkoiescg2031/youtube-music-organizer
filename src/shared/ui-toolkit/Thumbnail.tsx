@@ -1,10 +1,8 @@
 "use client";
 
-import React, { ReactNode, useId } from "react";
-
-import Image from "next/image";
-
 import classNames from "classnames";
+import Image from "next/image";
+import React, { ReactNode, useId } from "react";
 import styled from "styled-components";
 
 import { YoutubeThumbnails } from "../models/youtube-thumbnail";

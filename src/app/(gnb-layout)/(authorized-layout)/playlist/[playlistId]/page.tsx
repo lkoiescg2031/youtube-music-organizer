@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import { MusicListPage } from "@/pages/music-list";
+import { MusicListPage } from "pages/music-list";
 
 export interface MusicListAppPageProps {
 	params: {

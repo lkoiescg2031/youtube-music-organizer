@@ -1,12 +1,10 @@
-import React, { MouseEventHandler } from "react";
-
 import classNames from "classnames";
+import React, { MouseEventHandler } from "react";
+import Moment from "react-moment";
 import styled from "styled-components";
 
-import Moment from "react-moment";
-
-import { YoutubeThumbnails } from "@/shared/models/youtube-thumbnail";
-import Thumbnail from "@/shared/ui-toolkit/Thumbnail";
+import { YoutubeThumbnails } from "shared/models/youtube-thumbnail";
+import Thumbnail from "shared/ui-toolkit/Thumbnail";
 
 const PRIVACY_STATUS_NAME: Record<string, string> = {
 	private: "비공개",

@@ -1,4 +1,4 @@
-import { YoutubeThumbnails } from "@/shared/models/youtube-thumbnail";
+import { YoutubeThumbnails } from "shared/models/youtube-thumbnail";
 
 export interface INativePlaylistItem {
 	kind: "youtube#playlistItem";

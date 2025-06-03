@@ -1,9 +1,10 @@
 {
   "plugins": [
+    "@feature-sliced/eslint-plugin-messages",
     "import"
   ],
   "extends": [
-    "@feature-sliced/eslint-config/rules/import-order",
+    "@feature-sliced/eslint-config/rules/import-order/experimental",
     "@feature-sliced/eslint-config/rules/public-api/lite",
     "@feature-sliced/eslint-config/rules/layers-slices",
     "plugin:import/recommended",
@@ -11,6 +12,7 @@
     "next/typescript"
   ],
   "parser": "@typescript-eslint/parser",
+  "processor": "@feature-sliced/messages/fs",
   "settings": {
     "import/resolver": {
       "typescript": {
@@ -33,87 +35,6 @@
       {
         "max": 2,
         "maxEOF": 0
-      }
-    ],
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal"
-        ],
-        "pathGroups": [
-          {
-            "pattern": "{react,react-dom}",
-            "group": "builtin",
-            "position": "before"
-          },
-          {
-            "pattern": "next\/*",
-            "group": "builtin",
-            "position": "before"
-          },
-          {
-            "pattern": "{classnames,styled-components}",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "{jotai,jotai*}",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "@tanstack/react-query",
-            "group": "external",
-            "position": "before"
-          },
-          {
-            "pattern": "@/app/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/pages/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/widgets/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/features/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/entities/**",
-            "group": "internal",
-            "position": "before"
-          },
-          {
-            "pattern": "@/shared/**",
-            "group": "internal",
-            "position": "before"
-          }
-        ],
-        "newlines-between": "always",
-        "pathGroupsExcludedImportTypes": [
-          "react",
-          "react-dom",
-          "next*",
-          "classnames",
-          "styled-components",
-          "@*"
-        ],
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": false
-        },
-        "warnOnUnassignedImports": true
       }
     ]
   }

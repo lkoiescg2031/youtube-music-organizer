@@ -1,10 +1,9 @@
-import React, { FormEventHandler, ReactNode } from "react";
-
 import classNames from "classnames";
+import React, { FormEventHandler, ReactNode } from "react";
 import styled from "styled-components";
 
-import Button from "@/shared/ui-toolkit/Button";
-import Textbox from "@/shared/ui-toolkit/Textbox";
+import Button from "shared/ui-toolkit/Button";
+import Textbox from "shared/ui-toolkit/Textbox";
 
 export interface MusicAliasFormProps {
 	className?: string;

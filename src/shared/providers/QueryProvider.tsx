@@ -1,8 +1,8 @@
 "use client";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React, { ReactElement, ReactNode, useMemo } from "react";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export interface QueryProviderProps {
 	children?: ReactNode;

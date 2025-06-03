@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { LoginConfig, LoginPage } from "@/pages/login";
+import { LoginConfig, LoginPage } from "pages/login";
 
 export default function LoginAppPage(): ReactNode {
 	return (

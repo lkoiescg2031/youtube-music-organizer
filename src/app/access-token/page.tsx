@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { AccessTokenPage } from "@/pages/login";
+import { AccessTokenPage } from "pages/login";
 
 interface AccessTokenAppPageProps {
 	searchParams: {

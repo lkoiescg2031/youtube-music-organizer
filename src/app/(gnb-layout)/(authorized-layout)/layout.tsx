@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from "react";
 
-import { AuthorizedLayout, LoginConfig } from "@/pages/login";
+import { AuthorizedLayout, LoginConfig } from "pages/login";
 
 export interface AuthorizedAppLayoutProps {
 	children?: ReactNode;

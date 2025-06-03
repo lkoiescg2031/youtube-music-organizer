@@ -1,13 +1,12 @@
-import { useAtomValue } from "jotai";
-
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { useAtomValue } from "jotai";
 
 import {
 	youtubeMusicApi,
 	IYoutubeGetListCommonResponse,
-} from "@/shared/api/youtube-music-api-core";
-import { useYoutubeSDKConfig } from "@/shared/libs/useYoutubeSDKConfig";
-import { googleAuthState, IGoogleAuth } from "@/shared/models/youtube-login";
+} from "shared/api/youtube-music-api-core";
+import { useYoutubeSDKConfig } from "shared/libs/useYoutubeSDKConfig";
+import { googleAuthState, IGoogleAuth } from "shared/models/youtube-login";
 
 import { INativePlaylist } from "../models/native-playlist";
 

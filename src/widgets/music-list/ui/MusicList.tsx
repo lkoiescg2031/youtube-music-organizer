@@ -1,23 +1,21 @@
 "use client";
 
-import React, { MouseEventHandler, useEffect, useMemo, useState } from "react";
-
 import classNames from "classnames";
-import styled from "styled-components";
-
+import React, { MouseEventHandler, useEffect, useMemo, useState } from "react";
 import {
 	DragDropContext,
 	Droppable,
 	Draggable,
 	OnDragEndResponder,
 } from "react-beautiful-dnd";
+import styled from "styled-components";
 
-import { IntegrateMusicForm } from "@/features/integrate-music";
-import {
-	MusicSortDirectionType,
-	MusicSortKeyType,
-	useMusicSorter,
-} from "@/features/sort-playlist-item";
+import { IOverlay, useOverlay } from "shared/libs/overlay";
+import { useDocumentScrollEnd } from "shared/libs/useDocumentScrollEnd";
+import Button from "shared/ui-toolkit/Button";
+import GroupButton from "shared/ui-toolkit/GroupButton";
+import LoadingIcon from "shared/ui-toolkit/LoadingIcon";
+import Modal from "shared/ui-toolkit/Modal";
 
 import {
 	YoutubeMusic,
@@ -25,15 +23,15 @@ import {
 	useInfiniteGetPlaylistItemQuery,
 	usePutPlaylistItemPositionMutation,
 	INativePlaylistItem,
-} from "@/entities/music";
-import { useInfiniteGetMyPlaylistQuery } from "@/entities/playlist";
+} from "entities/music";
+import { useInfiniteGetMyPlaylistQuery } from "entities/playlist";
 
-import { IOverlay, useOverlay } from "@/shared/libs/overlay";
-import { useDocumentScrollEnd } from "@/shared/libs/useDocumentScrollEnd";
-import Button from "@/shared/ui-toolkit/Button";
-import GroupButton from "@/shared/ui-toolkit/GroupButton";
-import LoadingIcon from "@/shared/ui-toolkit/LoadingIcon";
-import Modal from "@/shared/ui-toolkit/Modal";
+import { IntegrateMusicForm } from "features/integrate-music";
+import {
+	MusicSortDirectionType,
+	MusicSortKeyType,
+	useMusicSorter,
+} from "features/sort-playlist-item";
 
 interface IOrderablePlaylistItem extends INativePlaylistItem {
 	selected?: boolean;

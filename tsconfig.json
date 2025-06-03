@@ -25,6 +25,24 @@
       "@/*": [
         "./src/*"
       ],
+      "app/*": [
+        "./src/app/*"
+      ],
+      "features/*": [
+        "./src/features/*"
+      ],
+      "entities/*": [
+        "./src/entities/*"
+      ],
+      "shared/*": [
+        "./src/shared/*"
+      ],
+      "widgets/*": [
+        "./src/widgets/*"
+      ],
+      "pages/*": [
+        "./src/pages/*"
+      ],
     }
   },
   "include": [

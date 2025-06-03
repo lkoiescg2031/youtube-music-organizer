@@ -1,11 +1,10 @@
 "use client";
 
-import React, { ReactElement, ReactNode } from "react";
-
 import classNames from "classnames";
+import React, { ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
-import { Gnb } from "@/widgets/gnb";
+import { Gnb } from "widgets/gnb";
 
 export interface GnbLayoutProps {
 	children?: ReactNode;

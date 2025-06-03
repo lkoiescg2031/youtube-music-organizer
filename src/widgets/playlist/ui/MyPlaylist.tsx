@@ -1,19 +1,14 @@
 "use client";
 
-import React from "react";
-
-import { useRouter } from "next/navigation";
-
 import classNames from "classnames";
+import { useRouter } from "next/navigation";
+import React from "react";
 import styled from "styled-components";
 
-import {
-	PlaylistCard,
-	useInfiniteGetMyPlaylistQuery,
-} from "@/entities/playlist";
+import Button from "shared/ui-toolkit/Button";
+import CardViewBox from "shared/ui-toolkit/CardViewBox";
 
-import Button from "@/shared/ui-toolkit/Button";
-import CardViewBox from "@/shared/ui-toolkit/CardViewBox";
+import { PlaylistCard, useInfiniteGetMyPlaylistQuery } from "entities/playlist";
 
 export interface MyPlaylistProps {
 	className?: string;

@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-
 import styled from "styled-components";
 
-import { useYoutubeSDKConfig } from "@/shared/libs/useYoutubeSDKConfig";
-import GoogleIcon from "@/shared/ui-toolkit/GoogleIcon";
+import { useYoutubeSDKConfig } from "shared/libs/useYoutubeSDKConfig";
+import GoogleIcon from "shared/ui-toolkit/GoogleIcon";
 
 interface GoogleLoginBtnProps {
 	accessTokenUrl: string;

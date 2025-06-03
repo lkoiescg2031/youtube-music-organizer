@@ -1,11 +1,10 @@
 "use client";
 
-import React from "react";
-
 import classNames from "classnames";
+import React from "react";
 import styled from "styled-components";
 
-import { GoogleLoginBtn } from "@/features/google-auth";
+import { GoogleLoginBtn } from "features/google-auth";
 
 export interface LoginFormProps {
 	className?: string;

@@ -1,11 +1,11 @@
 import React, { ReactNode } from "react";
 
-import DefaultHTMLLayout from "@/shared/layouts/DefaultHTMLLayout";
-import Overlay from "@/shared/libs/overlay";
-import QueryProvider from "@/shared/providers/QueryProvider";
-import StyledComponentsRegistry from "@/shared/providers/StyledComponentRegistry";
-import YoutubeSDKConfigProvider from "@/shared/providers/YoutubeSDKConfigProvider";
-import "@/shared/styles/global-styles.css";
+import DefaultHTMLLayout from "shared/layouts/DefaultHTMLLayout";
+import Overlay from "shared/libs/overlay";
+import QueryProvider from "shared/providers/QueryProvider";
+import StyledComponentsRegistry from "shared/providers/StyledComponentRegistry";
+import YoutubeSDKConfigProvider from "shared/providers/YoutubeSDKConfigProvider";
+import "shared/styles/global-styles.css";
 
 interface RootLayoutProps {
 	children: ReactNode;

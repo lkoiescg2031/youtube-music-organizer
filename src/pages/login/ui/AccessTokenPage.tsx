@@ -1,6 +1,6 @@
 import React from "react";
 
-import { YoutubeLoginProcessor } from "@/features/google-auth";
+import { YoutubeLoginProcessor } from "features/google-auth";
 
 export interface AccessTokenPageProps {
 	redirectUrl?: string;

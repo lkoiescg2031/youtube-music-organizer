@@ -1,7 +1,6 @@
 "use client";
 
 import React, { ReactNode } from "react";
-
 import styled from "styled-components";
 
 export interface DefaultHTMLLayoutProps {

@@ -1,6 +1,5 @@
-import { useCallback } from "react";
-
 import { useAtomValue } from "jotai";
+import { useCallback } from "react";
 
 import {
 	artistAliasDictionaryState,
@@ -9,7 +8,7 @@ import {
 	getUseMusicParam,
 	musicDictionaryState,
 	INativePlaylistItem,
-} from "@/entities/music";
+} from "entities/music";
 
 export type MusicSortKeyType = "title" | "artist" | "origin";
 export type MusicSortDirectionType = "asc" | "desc";

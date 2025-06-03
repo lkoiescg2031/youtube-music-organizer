@@ -1,6 +1,6 @@
+import { useAtomValue, useSetAtom } from "jotai";
 import { FunctionComponent, useCallback } from "react";
 
-import { useAtomValue, useSetAtom } from "jotai";
 
 import {
 	mountOverlayElementState,

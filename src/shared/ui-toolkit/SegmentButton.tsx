@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, {
 	MouseEventHandler,
 	ReactElement,
@@ -7,8 +8,6 @@ import React, {
 	useRef,
 	useState,
 } from "react";
-
-import classNames from "classnames";
 import styled from "styled-components";
 
 interface SegmentButtonItemProps {

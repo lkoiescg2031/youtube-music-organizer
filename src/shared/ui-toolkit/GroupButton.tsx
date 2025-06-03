@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { atom, useAtom } from "jotai";
 import React, {
 	Children,
 	cloneElement,
@@ -11,11 +13,7 @@ import React, {
 	useMemo,
 	useState,
 } from "react";
-
-import classNames from "classnames";
 import styled from "styled-components";
-
-import { atom, useAtom } from "jotai";
 
 import Button from "./Button";
 import DownArrowIcon from "./DownArrowIcon";

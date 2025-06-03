@@ -1,13 +1,11 @@
 "use client";
 
-import React, { ReactElement } from "react";
-
-import Link from "next/link";
-
 import classNames from "classnames";
+import Link from "next/link";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 
-import YoutubeIcon from "@/shared/ui-toolkit/YoutubeIcon";
+import YoutubeIcon from "shared/ui-toolkit/YoutubeIcon";
 
 export interface GnbProps {
 	className?: string;

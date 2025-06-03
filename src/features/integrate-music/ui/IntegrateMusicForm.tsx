@@ -1,13 +1,12 @@
-import React, { ReactElement, ReactNode, useState } from "react";
-
 import classNames from "classnames";
+import React, { ReactElement, ReactNode, useState } from "react";
 import styled from "styled-components";
 
-import { ArtistAliasForm } from "@/entities/artist-alias";
-import { INativePlaylistItem } from "@/entities/music";
-import { MusicAliasForm } from "@/entities/music-alias";
+import SegmentButton from "shared/ui-toolkit/SegmentButton";
 
-import SegmentButton from "@/shared/ui-toolkit/SegmentButton";
+import { ArtistAliasForm } from "entities/artist-alias";
+import { INativePlaylistItem } from "entities/music";
+import { MusicAliasForm } from "entities/music-alias";
 
 export interface IntegrateMusicFormProps {
 	className?: string;

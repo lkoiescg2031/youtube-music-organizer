@@ -1,6 +1,5 @@
-import React, { ReactElement, ReactNode } from "react";
-
 import classNames from "classnames";
+import React, { ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
 export interface CardViewBoxProps extends StyledCardViewBoxProps {

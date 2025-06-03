@@ -1,12 +1,11 @@
 "use client";
 
-import React, { MouseEventHandler, ReactNode } from "react";
-
 import classNames from "classnames";
+import React, { MouseEventHandler, ReactNode } from "react";
 import styled from "styled-components";
 
-import { YoutubeThumbnails } from "@/shared/models/youtube-thumbnail";
-import Thumbnail from "@/shared/ui-toolkit/Thumbnail";
+import { YoutubeThumbnails } from "shared/models/youtube-thumbnail";
+import Thumbnail from "shared/ui-toolkit/Thumbnail";
 
 import { useMusic } from "../models/music";
 

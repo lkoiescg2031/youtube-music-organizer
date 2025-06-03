@@ -1,12 +1,11 @@
 "use client";
 
+import { useAtomValue } from "jotai";
 import React, { ReactNode } from "react";
 
-import { useAtomValue } from "jotai";
+import { googleAuthState, isLogin } from "shared/models/youtube-login";
 
-import { LoginForm } from "@/widgets/login";
-
-import { googleAuthState, isLogin } from "@/shared/models/youtube-login";
+import { LoginForm } from "widgets/login";
 
 export interface AuthorizedLayoutProps {
 	accessTokenUrl: string;

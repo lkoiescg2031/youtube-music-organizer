@@ -1,8 +1,8 @@
 "use client";
 
+import { useHydrateAtoms } from "jotai/utils";
 import React, { ReactElement, ReactNode } from "react";
 
-import { useHydrateAtoms } from "jotai/utils";
 
 import {
 	youtubeAPIKeyState,

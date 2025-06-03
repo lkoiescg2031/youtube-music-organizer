@@ -68,6 +68,11 @@
   resolved "https://registry.yarnpkg.com/@feature-sliced/eslint-config/-/eslint-config-0.1.1.tgz#7e7d3f9cabd0e0cad9b1a206db5848b68340d75a"
   integrity sha512-6g2xgY3TVv24N1828U5gnfT7/R2aNiRghhCs45j6mbltLQik0CR7puKJhZSmhLqczMDM8TRqLVNhaCdvdgZpWw==
 
+"@feature-sliced/eslint-plugin-messages@^0.1.0-beta.2":
+  version "0.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@feature-sliced/eslint-plugin-messages/-/eslint-plugin-messages-0.1.0-beta.2.tgz#50ad0a94c606ad8b42f7dfbd1a02351371fe41e1"
+  integrity sha512-X+jeeUfTuo6Rj3UEPHVwo7Nf9pcs9/6+/s4WDiCG3kxrH9uZOJJXaZceDIqv9VT/b8YRWNmYyyLbN3jydTfUcw==
+
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.13.0.tgz"

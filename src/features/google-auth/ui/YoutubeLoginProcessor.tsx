@@ -1,15 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
-
-import { useRouter } from "next/navigation";
-
 import classNames from "classnames";
+import { useSetAtom } from "jotai";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { useSetAtom } from "jotai";
-
-import { googleAuthState, IGoogleAuth } from "@/shared/models/youtube-login";
+import { googleAuthState, IGoogleAuth } from "shared/models/youtube-login";
 
 interface YoutubeLoginProcessorProps {
 	className?: string;
