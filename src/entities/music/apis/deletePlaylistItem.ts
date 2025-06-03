@@ -1,6 +1,6 @@
-import { useMutation } from "@tanstack/react-query";
-
 import { useAtomValue } from "jotai";
+
+import { useMutation } from "@tanstack/react-query";
 
 import { youtubeMusicApi } from "@/shared/api/youtube-music-api-core";
 import { useYoutubeSDKConfig } from "@/shared/libs/useYoutubeSDKConfig";

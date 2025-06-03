@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-	MouseEventHandler,
-	ReactNode,
-	useCallback,
-	useEffect,
-	useLayoutEffect,
-} from "react";
+import React, { MouseEventHandler, ReactNode, useCallback } from "react";
 import { createPortal } from "react-dom";
 
 import classNames from "classnames";
@@ -34,7 +28,7 @@ export default function Modal(props: ModalProps): React.ReactElement {
 
 				props.onClose?.(e);
 			},
-			[props.onClose]
+			[props]
 		);
 
 	return (

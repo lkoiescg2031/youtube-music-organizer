@@ -6,14 +6,14 @@ import styled from "styled-components";
 import Button from "@/shared/ui-toolkit/Button";
 import Textbox from "@/shared/ui-toolkit/Textbox";
 
-export interface MusicDictionaryFormProps {
+export interface MusicAliasFormProps {
 	className?: string;
 	onSubmit?: FormEventHandler;
 	children?: ReactNode;
 }
 
-export default function MusicDictionaryForm(
-	props: MusicDictionaryFormProps
+export default function MusicAliasForm(
+	props: MusicAliasFormProps
 ): React.ReactElement {
 	const changeMusicDic: FormEventHandler = (e) => {
 		e.preventDefault();

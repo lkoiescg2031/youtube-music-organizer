@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 
 import classNames from "classnames";
 import styled from "styled-components";
@@ -6,14 +6,14 @@ import styled from "styled-components";
 import Button from "@/shared/ui-toolkit/Button";
 import Textbox from "@/shared/ui-toolkit/Textbox";
 
-export interface ArtistDictionaryFormProps {
+export interface ArtistAliasFormProps {
 	className?: string;
 	children?: ReactNode;
 }
 
-export default function ArtistDictionaryForm(
-	props: ArtistDictionaryFormProps
-): React.ReactElement {
+export default function ArtistAliasForm(
+	props: ArtistAliasFormProps
+): ReactElement {
 	return (
 		<StyledArtistDictionary
 			className={classNames("artist-dictionary-form", props.className)}

@@ -1,17 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { ReactElement } from "react";
 
 import Link from "next/link";
 
 import classNames from "classnames";
 import styled from "styled-components";
 
-import { useAtomValue } from "jotai";
-
-import GoogleLoginBtn from "@/features/google-auth/ui/GoogleLoginBtn";
-
-import { googleAuthState, isLogin } from "@/shared/models/youtube-login";
 import YoutubeIcon from "@/shared/ui-toolkit/YoutubeIcon";
 
 export interface GnbProps {
@@ -20,23 +15,14 @@ export interface GnbProps {
 	redirectUrl?: string;
 }
 
-export default function Gnb(props: GnbProps): React.ReactElement {
-	const googleAuth = useAtomValue(googleAuthState);
-
+export default function Gnb(props: GnbProps): ReactElement {
 	return (
 		<StyledGnbDiv className={classNames("gnb", props.className)}>
 			<Link href="/" className={classNames("gnb-title")}>
 				<YoutubeIcon className={classNames("gnb-logo")} />
 				<h1 className={classNames("page-title")}>Youtube Music 오거나이저</h1>
 			</Link>
-			<div className={classNames("gnb-btn-container")}>
-				{!isLogin(googleAuth) && (
-					<GoogleLoginBtn
-						accessTokenUrl={props.accessTokenUrl}
-						redirectUrl={props.redirectUrl}
-					/>
-				)}
-			</div>
+			<div className={classNames("gnb-btn-container")}></div>
 		</StyledGnbDiv>
 	);
 }

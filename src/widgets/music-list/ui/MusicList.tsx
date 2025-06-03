@@ -12,12 +12,12 @@ import {
 	OnDragEndResponder,
 } from "react-beautiful-dnd";
 
+import IntegrateMusicForm from "@/features/integrate-music/ui/IntegrateMusicForm";
 import {
 	MusicSortDirectionType,
 	MusicSortKeyType,
 	useMusicSorter,
 } from "@/features/sort-playlist-item/libs/useMusicSorter";
-import MusicSortForm from "@/features/sort-playlist-item/ui/MusicSortForm";
 
 import { useDeletePlaylistItemMutation } from "@/entities/music/apis/deletePlaylistItem";
 import { useInfiniteGetPlaylistItemQuery } from "@/entities/music/apis/getPlaylistItems";
@@ -122,12 +122,14 @@ export default function MusicList(props: MusicListProps): React.ReactElement {
 			setReorderedItem(items);
 		};
 
-	const modifyItem: (itemId: string) => MouseEventHandler<HTMLButtonElement> =
-		(_itemId: string) => () => {
+	const modifyItem: (
+		item: INativePlaylistItem
+	) => MouseEventHandler<HTMLButtonElement> =
+		(item: INativePlaylistItem) => () => {
 			// TODO overlay의 resolve, reject 연결
 			overlay((props: IOverlay<void>) => (
 				<Modal open onClose={() => props.resolve()}>
-					<MusicSortForm />
+					<IntegrateMusicForm defaultValues={item} />
 				</Modal>
 			));
 		};
@@ -369,7 +371,7 @@ export default function MusicList(props: MusicListProps): React.ReactElement {
 												}}
 											/>
 											<div className={classNames("music-list-item-control")}>
-												<Button onClick={modifyItem(item.id)}>수정</Button>
+												<Button onClick={modifyItem(item)}>수정</Button>
 												<Button color="danger" onClick={deleteItem(item.id)}>
 													삭제
 												</Button>
