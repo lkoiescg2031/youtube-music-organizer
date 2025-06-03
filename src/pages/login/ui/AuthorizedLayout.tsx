@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 
 import { useAtomValue } from "jotai";
 
-import LoginForm from "@/widgets/login/ui/LoginForm";
+import { LoginForm } from "@/widgets/login";
 
 import { googleAuthState, isLogin } from "@/shared/models/youtube-login";
 

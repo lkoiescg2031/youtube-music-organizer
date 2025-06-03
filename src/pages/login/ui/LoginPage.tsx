@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import LoginForm from "@/widgets/login/ui/LoginForm";
+import { LoginForm } from "@/widgets/login";
 
 interface LoginPageProps {
 	accessTokenUrl: string;

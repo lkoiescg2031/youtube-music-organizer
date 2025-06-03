@@ -5,7 +5,7 @@ import React, { ReactElement, ReactNode } from "react";
 import classNames from "classnames";
 import styled from "styled-components";
 
-import Gnb from "@/widgets/gnb/ui/Gnb";
+import { Gnb } from "@/widgets/gnb";
 
 export interface GnbLayoutProps {
 	children?: ReactNode;

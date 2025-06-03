@@ -7,8 +7,10 @@ import { useRouter } from "next/navigation";
 import classNames from "classnames";
 import styled from "styled-components";
 
-import { useInfiniteGetMyPlaylistQuery } from "@/entities/playlist/apis/playlist";
-import PlaylistCard from "@/entities/playlist/ui/PlaylistCard";
+import {
+	PlaylistCard,
+	useInfiniteGetMyPlaylistQuery,
+} from "@/entities/playlist";
 
 import Button from "@/shared/ui-toolkit/Button";
 import CardViewBox from "@/shared/ui-toolkit/CardViewBox";
