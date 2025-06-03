@@ -1,10 +1,11 @@
 {
   "plugins": [
-    // "no-relative-import-paths",
     "import"
   ],
   "extends": [
-    "plugin:@conarti/feature-sliced/recommended",
+    "@feature-sliced/eslint-config/rules/import-order",
+    "@feature-sliced/eslint-config/rules/public-api/lite",
+    "@feature-sliced/eslint-config/rules/layers-slices",
     "plugin:import/recommended",
     "next/core-web-vitals",
     "next/typescript"
@@ -18,6 +19,7 @@
     }
   },
   "rules": {
+    "import/no-named-as-default": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -26,25 +28,6 @@
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
-    "import/no-internal-modules": "off",
-    "import/no-named-as-default": "off",
-    // "no-restricted-imports": [
-    //   "error",
-    //   {
-    //     "patterns": [
-    //       ".*"
-    //     ]
-    //   }
-    // ],
-    // "no-relative-import-paths/no-relative-import-paths": [
-    //   "error",
-    //   {
-    //     "rootDir": "src",
-    //     "prefix": "@",
-    //     "allowSameFolder": false,
-    //     "allowedDepth": 0
-    //   }
-    // ],
     "no-multiple-empty-lines": [
       "error",
       {
@@ -53,7 +36,7 @@
       }
     ],
     "import/order": [
-      "warn",
+      "error",
       {
         "groups": [
           "builtin",
