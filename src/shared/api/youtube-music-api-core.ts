@@ -1,4 +1,4 @@
-import { IGoogleAuth } from "@/shared/models/youtube-login";
+import { IGoogleAuth } from "../models/youtube-login";
 
 export interface IYoutubeGetListCommonResponse<Kind extends string, Item> {
 	kind: Kind;

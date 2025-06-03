@@ -6,8 +6,8 @@ import { createPortal } from "react-dom";
 import classNames from "classnames";
 import styled from "styled-components";
 
-import Button from "@/shared/ui-toolkit/Button";
-import CloseIcon from "@/shared/ui-toolkit/CloseIcon";
+import Button from "./Button";
+import CloseIcon from "./CloseIcon";
 
 export interface ModalProps {
 	className?: string;

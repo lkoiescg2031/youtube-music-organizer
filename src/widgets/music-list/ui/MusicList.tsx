@@ -12,19 +12,21 @@ import {
 	OnDragEndResponder,
 } from "react-beautiful-dnd";
 
-import IntegrateMusicForm from "@/features/integrate-music/ui/IntegrateMusicForm";
+import { IntegrateMusicForm } from "@/features/integrate-music";
 import {
 	MusicSortDirectionType,
 	MusicSortKeyType,
 	useMusicSorter,
-} from "@/features/sort-playlist-item/libs/useMusicSorter";
+} from "@/features/sort-playlist-item";
 
-import { useDeletePlaylistItemMutation } from "@/entities/music/apis/deletePlaylistItem";
-import { useInfiniteGetPlaylistItemQuery } from "@/entities/music/apis/getPlaylistItems";
-import { usePutPlaylistItemPositionMutation } from "@/entities/music/apis/putPlaylistItem";
-import { INativePlaylistItem } from "@/entities/music/models/native-playlist-item";
-import YoutubeMusic from "@/entities/music/ui/YoutubeMusic";
-import { useInfiniteGetMyPlaylistQuery } from "@/entities/playlist/apis/playlist";
+import {
+	YoutubeMusic,
+	useDeletePlaylistItemMutation,
+	useInfiniteGetPlaylistItemQuery,
+	usePutPlaylistItemPositionMutation,
+	INativePlaylistItem,
+} from "@/entities/music";
+import { useInfiniteGetMyPlaylistQuery } from "@/entities/playlist";
 
 import { IOverlay, useOverlay } from "@/shared/libs/overlay";
 import { useDocumentScrollEnd } from "@/shared/libs/useDocumentScrollEnd";

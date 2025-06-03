@@ -3,21 +3,21 @@ import React, { ReactElement, ReactNode, useState } from "react";
 import classNames from "classnames";
 import styled from "styled-components";
 
-// import { useIntegrateMusic } from "@/features/integrate-music/models/useIntegrateMusic";
-
-import ArtistAliasForm from "@/entities/artist-alias/ui/ArtistAliasForm";
-import { INativePlaylistItem } from "@/entities/music/models/native-playlist-item";
-import MusicAliasForm from "@/entities/music-alias/ui/MusicAliasForm";
+import { ArtistAliasForm } from "@/entities/artist-alias";
+import { INativePlaylistItem } from "@/entities/music";
+import { MusicAliasForm } from "@/entities/music-alias";
 
 import SegmentButton from "@/shared/ui-toolkit/SegmentButton";
 
-export interface MusicItemFormProps {
+export interface IntegrateMusicFormProps {
 	className?: string;
 	defaultValues?: INativePlaylistItem;
 	children?: ReactNode;
 }
 
-export default function MusicItemForm(props: MusicItemFormProps): ReactElement {
+export default function IntegrateMusicForm(
+	props: IntegrateMusicFormProps
+): ReactElement {
 	const [activeForm, setActiveForm] = useState("Music");
 
 	// const { musicAlias, artistAlias } = useIntegrateMusic(props.defaultValues);

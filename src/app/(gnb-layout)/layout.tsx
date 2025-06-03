@@ -1,19 +1,11 @@
 import React, { ReactElement, ReactNode } from "react";
 
-import DefaultGnbLayout from "@/pages/gnb/ui/DefaultGnbLayout";
-import LoginConfig from "@/pages/login/config/LoginConfig";
+import { GnbLayout } from "@/pages/gnb";
 
-export interface GnbLayoutProps {
+export interface GnbAppLayoutProps {
 	children?: ReactNode;
 }
 
-export default function GnbLayout(props: GnbLayoutProps): ReactElement {
-	return (
-		<DefaultGnbLayout
-			accessTokenUrl={LoginConfig.accessTokenUrl}
-			redirectUrl={LoginConfig.redirectUrl}
-		>
-			{props.children}
-		</DefaultGnbLayout>
-	);
+export default function GnbAppLayout(props: GnbAppLayoutProps): ReactElement {
+	return <GnbLayout>{props.children}</GnbLayout>;
 }

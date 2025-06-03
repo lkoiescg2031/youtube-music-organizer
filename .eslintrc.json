@@ -1,9 +1,10 @@
 {
   "plugins": [
-    "no-relative-import-paths",
+    // "no-relative-import-paths",
     "import"
   ],
   "extends": [
+    "plugin:@conarti/feature-sliced/recommended",
     "plugin:import/recommended",
     "next/core-web-vitals",
     "next/typescript"
@@ -27,23 +28,23 @@
     ],
     "import/no-internal-modules": "off",
     "import/no-named-as-default": "off",
-    "no-restricted-imports": [
-      "error",
-      {
-        "patterns": [
-          ".*"
-        ]
-      }
-    ],
-    "no-relative-import-paths/no-relative-import-paths": [
-      "error",
-      {
-        "rootDir": "src",
-        "prefix": "@",
-        "allowSameFolder": false,
-        "allowedDepth": 0
-      }
-    ],
+    // "no-restricted-imports": [
+    //   "error",
+    //   {
+    //     "patterns": [
+    //       ".*"
+    //     ]
+    //   }
+    // ],
+    // "no-relative-import-paths/no-relative-import-paths": [
+    //   "error",
+    //   {
+    //     "rootDir": "src",
+    //     "prefix": "@",
+    //     "allowSameFolder": false,
+    //     "allowedDepth": 0
+    //   }
+    // ],
     "no-multiple-empty-lines": [
       "error",
       {

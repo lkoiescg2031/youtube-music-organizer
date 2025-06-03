@@ -8,14 +8,14 @@ import LoginForm from "@/widgets/login/ui/LoginForm";
 
 import { googleAuthState, isLogin } from "@/shared/models/youtube-login";
 
-export interface LoginLayoutProps {
+export interface AuthorizedLayoutProps {
 	accessTokenUrl: string;
 	redirectUrl: string;
 	children?: ReactNode;
 }
 
-export default function LoginLayout(
-	props: LoginLayoutProps
+export default function AuthorizedLayout(
+	props: AuthorizedLayoutProps
 ): React.ReactElement {
 	const googleAuth = useAtomValue(googleAuthState);
 

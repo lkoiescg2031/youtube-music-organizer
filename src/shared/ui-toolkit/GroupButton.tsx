@@ -17,8 +17,8 @@ import styled from "styled-components";
 
 import { atom, useAtom } from "jotai";
 
-import Button from "@/shared/ui-toolkit/Button";
-import DownArrowIcon from "@/shared/ui-toolkit/DownArrowIcon";
+import Button from "./Button";
+import DownArrowIcon from "./DownArrowIcon";
 
 const activeDropdownIdState = atom<string>();
 

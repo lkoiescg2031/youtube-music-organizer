@@ -1,15 +1,15 @@
 import React, { ReactNode } from "react";
 
-import LoginProcessPage from "@/pages/login/ui/LoginProcessPage";
+import { AccessTokenPage } from "@/pages/login";
 
-interface AccessTokenPageProps {
+interface AccessTokenAppPageProps {
 	searchParams: {
 		redirectUrl?: string;
 	};
 }
 
-export default function AccessTokenPage(
-	props: AccessTokenPageProps
+export default function AccessTokenAppPage(
+	props: AccessTokenAppPageProps
 ): ReactNode {
-	return <LoginProcessPage redirectUrl={props.searchParams.redirectUrl} />;
+	return <AccessTokenPage redirectUrl={props.searchParams.redirectUrl} />;
 }

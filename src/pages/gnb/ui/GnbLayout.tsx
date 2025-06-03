@@ -7,21 +7,14 @@ import styled from "styled-components";
 
 import Gnb from "@/widgets/gnb/ui/Gnb";
 
-export interface DefaultGnbLayoutProps {
-	accessTokenUrl: string;
-	redirectUrl: string;
+export interface GnbLayoutProps {
 	children?: ReactNode;
 }
 
-export default function DefaultGnbLayout(
-	props: DefaultGnbLayoutProps
-): ReactElement {
+export default function GnbLayout(props: GnbLayoutProps): ReactElement {
 	return (
 		<StyledDefaultGnbLayout className={classNames("default-gnb-layout")}>
-			<Gnb
-				accessTokenUrl={props.accessTokenUrl}
-				redirectUrl={props.redirectUrl}
-			/>
+			<Gnb />
 			{props.children}
 		</StyledDefaultGnbLayout>
 	);

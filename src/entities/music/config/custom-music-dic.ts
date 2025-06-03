@@ -1,4 +1,4 @@
-import { MusicDic } from "@/entities/music/models/music";
+import { MusicDic } from "../models/music";
 
 export const MUSIC_DICTIONARY: MusicDic = {
 	YBvcVTZefJM: {

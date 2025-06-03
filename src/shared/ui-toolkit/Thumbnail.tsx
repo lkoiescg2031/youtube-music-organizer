@@ -7,7 +7,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import styled from "styled-components";
 
-import { YoutubeThumbnails } from "@/shared/models/youtube-thumbnail";
+import { YoutubeThumbnails } from "../models/youtube-thumbnail";
 
 export interface ThumbnailProps {
 	className?: string;

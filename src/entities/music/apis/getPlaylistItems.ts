@@ -4,14 +4,14 @@ import { useAtomValue } from "jotai";
 
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
 
-import { INativePlaylistItem } from "@/entities/music/models/native-playlist-item";
-
 import {
 	IYoutubeGetListCommonResponse,
 	youtubeMusicApi,
 } from "@/shared/api/youtube-music-api-core";
 import { useYoutubeSDKConfig } from "@/shared/libs/useYoutubeSDKConfig";
 import { googleAuthState, IGoogleAuth } from "@/shared/models/youtube-login";
+
+import { INativePlaylistItem } from "../models/native-playlist-item";
 
 interface IGetPlaylistItemsParams {
 	youtubeAPIKey: string;

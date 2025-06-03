@@ -1,6 +1,6 @@
 import { atom } from "jotai";
 
-import { ARTIST_ALIAS_DICTIONARY } from "@/entities/music/config/custom-artist-dic";
+import { ARTIST_ALIAS_DICTIONARY } from "../config/custom-artist-dic";
 
 export type ArtistAlias = Record<string, string>;
 

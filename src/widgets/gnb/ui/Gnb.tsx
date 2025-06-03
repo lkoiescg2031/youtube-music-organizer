@@ -11,8 +11,6 @@ import YoutubeIcon from "@/shared/ui-toolkit/YoutubeIcon";
 
 export interface GnbProps {
 	className?: string;
-	accessTokenUrl: string;
-	redirectUrl?: string;
 }
 
 export default function Gnb(props: GnbProps): ReactElement {

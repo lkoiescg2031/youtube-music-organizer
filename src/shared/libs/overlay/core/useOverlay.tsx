@@ -6,8 +6,8 @@ import {
 	mountOverlayElementState,
 	overlayElementsState,
 	unmountOverlayElementState,
-} from "@/shared/libs/overlay/core/OverlayProvider";
-import "@/shared/libs/with-resolvers-polyfill";
+} from "./OverlayProvider";
+import "../../../libs/with-resolvers-polyfill";
 
 export interface IOverlay<Value, Error = unknown> {
 	overlayId: number;

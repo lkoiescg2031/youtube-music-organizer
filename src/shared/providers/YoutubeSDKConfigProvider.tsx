@@ -7,7 +7,7 @@ import { useHydrateAtoms } from "jotai/utils";
 import {
 	youtubeAPIKeyState,
 	youtubeClientIdState,
-} from "@/shared/libs/useYoutubeSDKConfig";
+} from "../libs/useYoutubeSDKConfig";
 
 export interface YoutubeSDKConfigProviderProps {
 	children?: ReactNode;

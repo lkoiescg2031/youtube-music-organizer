@@ -1,11 +1,8 @@
 import { atom, useAtomValue } from "jotai";
 
-import { MUSIC_DICTIONARY } from "@/entities/music/config/custom-music-dic";
-import {
-	ArtistAlias,
-	artistAliasDictionaryState,
-} from "@/entities/music/models/artist";
-import { INativePlaylistItem } from "@/entities/music/models/native-playlist-item";
+import { MUSIC_DICTIONARY } from "../config/custom-music-dic";
+import { ArtistAlias, artistAliasDictionaryState } from "../models/artist";
+import { INativePlaylistItem } from "../models/native-playlist-item";
 
 interface IMusic {
 	title: string;

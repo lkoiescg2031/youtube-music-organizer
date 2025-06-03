@@ -2,14 +2,14 @@ import { useCallback } from "react";
 
 import { useAtomValue } from "jotai";
 
-import { artistAliasDictionaryState } from "@/entities/music/models/artist";
 import {
+	artistAliasDictionaryState,
 	getArtist,
 	getTitle,
 	getUseMusicParam,
 	musicDictionaryState,
-} from "@/entities/music/models/music";
-import { INativePlaylistItem } from "@/entities/music/models/native-playlist-item";
+	INativePlaylistItem,
+} from "@/entities/music";
 
 export type MusicSortKeyType = "title" | "artist" | "origin";
 export type MusicSortDirectionType = "asc" | "desc";

@@ -1,9 +1,8 @@
 import React, { ReactNode } from "react";
 
-import LoginConfig from "@/pages/login/config/LoginConfig";
-import LoginPage from "@/pages/login/ui/LoginPage";
+import { LoginConfig, LoginPage } from "@/pages/login";
 
-export default function LoginServicePage(): ReactNode {
+export default function LoginAppPage(): ReactNode {
 	return (
 		<LoginPage
 			accessTokenUrl={LoginConfig.accessTokenUrl}

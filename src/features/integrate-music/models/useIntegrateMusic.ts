@@ -1,10 +1,12 @@
 import { useAtomValue } from "jotai";
 
-import { IArtistAlias } from "@/entities/artist-alias/models/ArtistAlias";
-import { artistAliasDictionaryState } from "@/entities/music/models/artist";
-import { musicDictionaryState } from "@/entities/music/models/music";
-import { INativePlaylistItem } from "@/entities/music/models/native-playlist-item";
-import { IMusicAlias } from "@/entities/music-alias/models/MusicAlias";
+import { IArtistAlias } from "@/entities/artist-alias";
+import {
+	artistAliasDictionaryState,
+	musicDictionaryState,
+	INativePlaylistItem,
+} from "@/entities/music";
+import { IMusicAlias } from "@/entities/music-alias";
 
 interface IUseIntegrateMusic {
 	musicAlias: IMusicAlias;

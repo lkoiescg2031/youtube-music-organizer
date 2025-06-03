@@ -5,10 +5,10 @@ import React, { MouseEventHandler, ReactNode } from "react";
 import classNames from "classnames";
 import styled from "styled-components";
 
-import { useMusic } from "@/entities/music/models/music";
-
 import { YoutubeThumbnails } from "@/shared/models/youtube-thumbnail";
 import Thumbnail from "@/shared/ui-toolkit/Thumbnail";
+
+import { useMusic } from "../models/music";
 
 export interface YoutubeMusicProps {
 	className?: string;
